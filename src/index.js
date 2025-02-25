@@ -11,6 +11,8 @@ app.use(cors());
 
 const moment = require("moment");
 
+const PORT = process.env.PORT || 3000;
+
 if (!process.env.MONGO_URI) {
   console.log("MONGO_URI is not defined in environment Variable.");
   process.exit(1);
@@ -27,7 +29,7 @@ mongoose
 const Doctor = require("../model/doctor");
 const Appointment = require("../model/appointment");
 
-app.listen(3000, () => console.log("Server running at http://localhost:3000/"));
+app.listen(PORT, () => console.log("Server running at http://localhost:3000/"));
 
 //Get Doctors Api
 app.get("/doctors", async (request, response) => {
