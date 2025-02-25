@@ -24,8 +24,8 @@ mongoose
     process.exit(1);
   });
 
-const Doctor = require("./model/doctor");
-const Appointment = require("./model/appointment");
+const Doctor = require("../model/doctor");
+const Appointment = require("../model/appointment");
 
 app.listen(3000, () => console.log("Server running at http://localhost:3000/"));
 
